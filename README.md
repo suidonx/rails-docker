@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails と Postgres を使った Web アプリの環境構築方法を説明します。
 
-Things you may want to cover:
+## リポジトリをローカル環境に clone する
 
-* Ruby version
+まずターミナルを開き、任意のディレクトリ内で `git clone` とコマンドを入力します。
 
-* System dependencies
+カレントディレクトリに rails-docker ディレクトリが作成されます。
 
-* Configuration
+## rails-docker ディレクトリに移動する
 
-* Database creation
+`cd rails-docker` と入力して、rails-docker ディレクトリに移動します。
 
-* Database initialization
+## Docker コンテナを起動する
 
-* How to run the test suite
+`docker-compose up` と入力して、Docker コンテナを起動します。
 
-* Services (job queues, cache servers, search engines, etc.)
+ターミナルの出力が下記の表示になっていれば OK です。
 
-* Deployment instructions
+```
+web-1 | \* Listening on http://0.0.0.0:3000
+web-1 | Use Ctrl-C to stop
+```
 
-* ...
+## localhost:3000 にアクセスする
+
+次に、http://localhost:3000/ にアクセスします。
+
+Myapp というタイトルの Web ページが表示され、Tasks という見出しと New task というリンクが表示されていれば OK です。
